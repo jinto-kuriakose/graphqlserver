@@ -1,0 +1,19 @@
+### This is the main way to configure the application (other than annotations).
+### This file is in Yaml format but you can also configure spring boot using the traditional
+### Java properties file format. 
+spring.jmx:
+   enabled: true
+
+server:
+   port: 8081
+   tomcat:
+     access-log:
+       enabled: true
+       directory: logs
+
+spring:
+  application:
+    name: GraphQL Server
+
+# instance name added to the metrics
+instanceId: ${spring.application.name}-${server.port}
